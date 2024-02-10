@@ -1,9 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import ContactItem from './ContactItem';
 import ContactsListSteled from './ContactsList.styled';
-import { selectContacts, selectError, selectIsLoading } from 'redux/selectors';
+import {
+  selectContacts,
+  selectError,
+  selectIsLoading,
+} from '../../redux/selectors';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from '../../redux/operations';
 
 const ContactsList = () => {
   const dispatch = useDispatch();

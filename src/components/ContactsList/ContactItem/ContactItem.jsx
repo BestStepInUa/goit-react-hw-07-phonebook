@@ -2,12 +2,12 @@
 // import { delContact } from '../../../redux/contactsSlice';
 import ContactItemStyled from './ContactItem.styled';
 
-const ContactItem = ({ contact: { id, name, number } }) => {
+const ContactItem = ({ contact: { id, name, phone } }) => {
   // const dispatch = useDispatch();
   return (
     <ContactItemStyled>
       <p>
-        {name}: <span>{number}</span>
+        {name}: <span>{phone}</span>
       </p>
       <button>Delete</button>
       {/* <button onClick={() => dispatch(delContact(id))}>Delete</button> */}
