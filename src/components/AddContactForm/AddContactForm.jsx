@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import toast from 'react-hot-toast';
-import AddContactFormStyled from './Addcontactform.styled.';
-import { selectContacts } from '../../redux/selectors';
 import { addContact } from '../../redux/operations';
+import { selectContacts } from '../../redux/selectors';
+import AddContactFormStyled from './Addcontactform.styled.';
 
 const INITIAL_STATE = {
   name: '',
@@ -11,8 +11,9 @@ const INITIAL_STATE = {
 };
 
 const AddContactForm = () => {
-  const contacts = useSelector(selectContacts);
   const [state, setState] = useState(INITIAL_STATE);
+  const contacts = useSelector(selectContacts);
+
   const dispatch = useDispatch();
 
   const handelChange = evt => {
